@@ -1,4 +1,3 @@
-rootProject.name = 'GradleAndroidAspectJPlugin'
 include 'SampleApp_01_Normal'
 include ':SampleApp_02_AspectInAndroidLib_App'
 include ':SampleApp_02_AspectInAndroidLib_lib'

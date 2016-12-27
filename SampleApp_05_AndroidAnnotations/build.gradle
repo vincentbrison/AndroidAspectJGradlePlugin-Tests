@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'android-apt'
-apply plugin: 'me.leolin.gradle-android-aspectj'
+apply plugin: 'com.github.vincentbrison.android-aspectj-plugin'
 
 android {
     compileSdkVersion project.compileSdkVersion

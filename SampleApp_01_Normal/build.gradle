@@ -1,5 +1,9 @@
 apply plugin: 'com.android.application'
-apply plugin: 'me.leolin.gradle-android-aspectj'
+apply plugin: 'com.github.vincentbrison.android-aspectj-plugin'
+
+aspectj {
+    includeAspectPath = false;
+}
 
 android {
     compileSdkVersion project.compileSdkVersion
