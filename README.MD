@@ -1,65 +1,7 @@
-Gradle Android AspectJ Plugin
+Android AspectJ Gradle Plugin Tests
 ===================================
 
-AspectJ plugin for Android.
-
-# SUPPORTS
-* [Retrolambda](https://github.com/evant/gradle-retrolambda).
-* [Multidex](https://developer.android.com/tools/building/multidex.html).
-* [InstantRun](https://developer.android.com/studio/run/index.html#instant-run) (aspectj transformation is not incremental, see below).
-
-# USAGE
-## General usage
-```
-buildscript {
-    repositories {
-        maven { url 'https://jitpack.io' }
-    }
-    dependencies {
-        ...
-        classpath 'com.github.vincentbrison:android-aspectj-plugin:1.0.0'
-    }
-}
-
-apply plugin: 'com.android.application'
-apply plugin: 'com.github.vincentbrison.android-aspectj-plugin'
-```
-## Extension
-```
-aspectj {
-    include includeAspectPath = false; (true by default, see http://www.eclipse.org/aspectj/doc/released/devguide/ajc-ref.html)
-}
-```
-
-## With [Retrolambda](https://github.com/evant/gradle-retrolambda):
-```
-buildscript {
-    repositories {
-        maven { url 'https://jitpack.io' }
-    }
-    dependencies {
-        ...
-        classpath 'me.tatarka:gradle-retrolambda:3.0.1'
-        classpath 'com.github.vincentbrison:android-aspectj-plugin:1.0.0'
-    }
-}
-
-apply plugin: 'com.android.application'
-apply plugin: 'me.tatarka.retrolambda'
-apply plugin: 'com.github.vincentbrison.android-aspectj-plugin'
-```
-
-## About Instant Run
-The aspectj task is not incremental, so even if you are using instant run, the full aspectj transformation will be applied.
-Aspectj has an [incremental mode](http://www.eclipse.org/aspectj/doc/released/devguide/ajc-ref.html) but it is not supported by this plugin.
-To bench the impact of this task on your build, you may use the following command :
-```
-gradle :{module}:compile{buildType}{flavor}AspectJ --profile
-```
-
-# DEVELOP BY
-Fork and rewrite by [Vincent Brison](https://github.com/vincentbrison)
-Originally developed by [Leo Lin](https://github.com/leolin310148)
+Android tests projects for https://github.com/vincentbrison/AndroidAspectJGradlePlugin.
 
 # LICENSE
 ```
